@@ -1,9 +1,12 @@
 package models
 
-//SubstantivePost DataStructure
+import "time"
+
 type SubstantivePost struct {
-	SubstantivePostId                int    `json:"substantivepostid,omitempty" form:"substantivepostid" validate:"omitempty,numeric"`
-	SubstantivePostTitle             string `json:"substantiveposttitle" form:"substantiveposttitle" validate:"required"`
-	SubstantivePostDescriptions      string `json:"substantivepostdescriptions" form:"substantivepostdescriptions" validate:"required"`
-	SubstantivePostEntryRequirements string `json:"substantivepostentryrequirements" form:"substantivepostentryrequirements" validate:"required"`
+	Id                               int       `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
+	SubstantivePostTitle             string    `json:"substantive_post_title" form:"substantive_post_title" validate:"required"`
+	SubstantivePostDescriptions      string    `json:"substantive_post_descriptions" form:"substantive_post_descriptions" validate:"required"`
+	SubstantivePostEntryRequirements string    `json:"substantive_post_entry_requirements" form:"substantive_post_entry_requirements" validate:"required"`
+	CreatedBy                        int       `json:"created_by,omitempty"`
+	CreatedAt                        time.Time `json:"created_at"`
 }
