@@ -1,8 +1,11 @@
 package models
 
-//SalaryScale DataStructure
+import "time"
+
 type SalaryScale struct {
-	SalaryScaleId int    `json:"salaryscaleid,omitempty" form:"salaryscaleid" validate:"omitempty,numeric"`
-	ScaleCode     string `json:"scalecode" form:"scalecode" validate:"required"`
-	SalaryAmount  string `json:"salaryamount" form:"salaryamount" validate:"required"`
+	Id           int       `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
+	ScaleCode    string    `json:"scale_code" form:"scale_code" validate:"required"`
+	SalaryAmount float64   `json:"salary_amount" form:"salary_amount" validate:"required"`
+	CreatedBy    int       `json:"created_by,omitempty"`
+	CreatedAt    time.Time `json:"created_at"`
 }
