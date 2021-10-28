@@ -1,6 +1,7 @@
 package models
 
 import (
+	"aim/services/entity"
 	"time"
 
 	jwt "github.com/dgrijalva/jwt-go"
@@ -21,7 +22,7 @@ type LoginRequest struct {
 
 //Defines UserStructure
 type User struct {
-	ID             int       `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
+	ID             entity.ID `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
 	Name           string    `json:"name" form:"name" validate:"required"`
 	Email          string    `json:"email" form:"email" validate:"required,email"`
 	Password       string    `json:"password" form:"password"  validate:"required,min=1"`
@@ -36,16 +37,16 @@ type User struct {
 
 //Defines UserStructure
 type UserEdit struct {
-	ID    int32  `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
-	Name  string `json:"name" form:"name" validate:"required"`
-	Email string `json:"email" form:"email" validate:"required,email"`
+	ID    entity.ID `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
+	Name  string    `json:"name" form:"name" validate:"required"`
+	Email string    `json:"email" form:"email" validate:"required,email"`
 }
 
 type UserID struct {
-	ID int32 `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
+	ID entity.ID `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
 }
 
 type UserRole struct {
-	ID    int32   `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
-	Roles []int32 `json:"roles" form:"roles[]" validate:"required"`
+	ID    entity.ID `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
+	Roles []int32   `json:"roles" form:"roles[]" validate:"required"`
 }

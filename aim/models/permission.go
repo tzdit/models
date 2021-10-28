@@ -1,12 +1,13 @@
 package models
 
 import (
+	"aim/services/entity"
 	"time"
 )
 
 // Permission Struct
 type Permission struct {
-	ID         int       `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
+	ID         entity.ID `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
 	Path       string    `json:"path" form:"path" validate:"required"`
 	Method     string    `json:"method" form:"method" validate:"required"`
 	Service    string    `json:"service" form:"service" validate:"required"`

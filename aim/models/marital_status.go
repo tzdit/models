@@ -7,5 +7,5 @@ type MaritalStatus struct {
 	MaritalStatus string    `json:"marital_status" form:"marital_status" validate:"required"`
 	Description   string    `json:"description" form:"description" validate:"required"`
 	CreatedBy     int       `json:"created_by,omitempty"`
-	CreatedAt     time.Time `json:"created_at" `
+	CreatedAt     time.Time `json:"created_at"`
 }
