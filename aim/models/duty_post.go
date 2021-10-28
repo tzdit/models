@@ -1,13 +1,11 @@
 package models
 
-import (
-	"time"
-)
+import "time"
 
-//DutyPost DataStructure
 type DutyPost struct {
-	Id           int       `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
-	ActionTypeId int       `json:"action_type_id" form:"action_type_id" validate:"required"`
-	CreatedBy    int       `json:"created_by,omitempty"`
-	CreatedAt    time.Time `json:"created_at,omitempty"`
+	Id                  int       `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
+	CreatedBy           int       `json:"created_by,omitempty"`
+	CreatedAt           time.Time `json:"created_at"`
+	DutyPostTitle       string    `json:"duty_post_title" form:"duty_post_title" validate:"required"`
+	DutyPostDescription string    `json:"duty_post_description" form:"duty_post_description" validate:"required"`
 }
