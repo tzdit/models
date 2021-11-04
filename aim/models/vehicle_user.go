@@ -4,7 +4,7 @@ import "time"
 
 type VehicleUser struct {
 	Id                    int       `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
-	VehicleId             int       `json:"vehicle_id,omitempty" form:"vehicle_id" validate:"omitempty,numeric"`
+	VehicleDetailId             int       `json:"vehicle_detail_id,omitempty" form:"vehicle_id" validate:"omitempty,numeric"`
 	Name                  string    `json:"name" form:"name" validate:"required"`
 	Descriptions          string    `json:"descriptions" form:"descriptions" validate:"required"`
 	FromDate              time.Time `json:"from_date" form:"from_date" validate:"required"`
@@ -17,7 +17,7 @@ type VehicleUser struct {
 //VehicleUserFull DataStructure
 type VehicleUserFull struct {
 	Id                    int       `json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
-	VehicleTitle          string    `json:"vehicle_id,omitempty" form:"vehicle_id" validate:"omitempty,numeric"`
+	VehicleTitle          string    `json:"vehicle_detail_id,omitempty" form:"vehicle_id" validate:"omitempty,numeric"`
 	Name                  string    `json:"name" form:"name" validate:"required"`
 	Descriptions          string    `json:"descriptions" form:"descriptions" validate:"required"`
 	FromDate              time.Time `json:"from_date" form:"from_date" validate:"required"`
