@@ -14,7 +14,7 @@ type ExitRequest struct{
 
 }
 
-type ExitRequestfull struct{
+type ExitRequestFull struct{
 	Id	int	`json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
 	MyUserId    int		`json:"my_user_id,omitempty" form:"my_user_id" validate:"omitempty,numeric"`
 	TargetName    string		`json:"target_id,omitempty" form:"target_id" validate:"omitempty,numeric"`
