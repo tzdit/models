@@ -22,7 +22,7 @@ type NewStaffRequirementFull struct{
 	SalaryScale    string					`json:"salary_scale_id,omitempty" form:"salary_scale_id" validate:"omitempty,numeric"`
 	Reasons    string						`json:"reasons" form:"reasons" validate:"required"`
 	DepartmentName    string				`json:"department_id,omitempty" form:"department_id" validate:"omitempty,numeric"`
-	AnnualSalary    float64					`json:"annual_salary" form:"annual_salary" validate:"required"`
+	AnnualSalary    string					`json:"annual_salary" form:"annual_salary" validate:"required"`
 	NewStaffRequirementStatus    string		`json:"new_staff_requirement_status_id,omitempty" form:"new_staff_requirement_status_id" validate:"omitempty,numeric"`
 	CreatedBy    int						`json:"created_by,omitempty"  validate:"omitempty,numeric"`
 	CreatedAt    time.Time					`json:"created_at"  validate:"required"`
