@@ -13,7 +13,7 @@ type VehicleDetail struct {
 	VehicleTypeId    int       `json:"vehicle_type_id,omitempty" form:"vehicle_type_id" validate:"omitempty,numeric"`
 	CampusId         int       `json:"campus_id,omitempty" form:"campus_id" validate:"omitempty,numeric"`
 	VehicleStatusId  int       `json:"vehicle_status_id,omitempty" form:"vehicle_status_id" validate:"omitempty,numeric"`
-	CampusAssignedBy int       `json:"campus_assigned_by,omitempty" form:"campus_assigned_by" validate:"omitempty,numeric"`
+	CampusAssignedBy string       `json:"campus_assigned_by,omitempty" form:"campus_assigned_by" validate:"omitempty,numeric"`
 	Mileage          float64   `json:"mileage" form:"mileage" validate:"required"`
 	AttachmentId     int       `json:"attachment_id,omitempty" form:"attachment_id" validate:"omitempty,numeric"`
 	EmployeeId       int       `json:"employee_id,omitempty" form:"employee_id" validate:"omitempty,numeric"`
