@@ -11,3 +11,13 @@ type VehicleRequestApproval struct{
 	CreatedBy    	int			`json:"created_by,omitempty" form:"created_by" validate:"omitempty,numeric"`
 	CreatedAt    	time.Time	`json:"created_at" form:"created_at" validate:"required"`
 }
+
+type VehicleRequestApprovalFull struct{
+	Id				int			`json:"id,omitempty" form:"id" validate:"omitempty,numeric"`
+	EmployeeId    	string			`json:"employee_id,omitempty" form:"employee_id" validate:"omitempty,numeric"`
+	VehicleRequestActionId    string		`json:"vehicle_request_action_id,omitempty" form:"vehicle_request_action_id" validate:"omitempty,numeric"`
+	Minutes    		string		`json:"minutes" form:"minutes" validate:"required"`
+	VehicleRequestId    string		`json:"vehicle_request_id,omitempty" form:"vehicle_request_id" validate:"omitempty,numeric"`
+	CreatedBy    	int			`json:"created_by,omitempty" form:"created_by" validate:"omitempty,numeric"`
+	CreatedAt    	time.Time	`json:"created_at" form:"created_at" validate:"required"`
+}
